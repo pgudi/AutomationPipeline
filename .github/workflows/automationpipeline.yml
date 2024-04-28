@@ -29,6 +29,8 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn clean install
+    - name: Create Folder
+      run: mkdir -p AutomationPipeline/
     - name: Publish Test results
       uses: actions/upload-artifact@v1
       with:
